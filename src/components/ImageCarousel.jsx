@@ -33,22 +33,22 @@ const ImageCarousel = () => {
             
             >
                 <div className='  border-3 border-green-500 shadow-2xl rounded-3xl text-center p-2 transition ease-in-out duration-300  hover:-translate-y-0.7 hover:scale-105 hover:shadow-black'><FontAwesomeIcon icon={faPeopleGroup} style={{ color: "#38B876", fontSize: '7rem', padding: '1rem' }} />
-                    <h5 className='font-sans  tracking-widest '>Looking for like-minded people</h5>
-                    <p className='font-sans text-s'>If you are a person who supports our ideas and wants to make his utmost contribution, we welcome you!</p>
+                    <h5 className='font-sans font-normal tracking-widest '>Looking for like-minded people</h5>
+                    <p className='font-sans font-extralight text-s'>If you are a person who supports our ideas and wants to make his utmost contribution, we welcome you!</p>
                 </div>
                 <div className=' border-3 border-green-500 shadow-2xl rounded-3xl text-center p-2 transition ease-in-out duration-300  hover:-translate-y-0.7 hover:scale-105 hover:shadow-black'><FontAwesomeIcon icon={faRecycle} style={{ color: "#38B876", fontSize: '7rem', padding: '1.5rem' }} />
                     <h5 className='font-sans  tracking-widest ' >Learn About Recycling</h5>
-                    <p className='font-sans text-s'>Learn how recycling makes a big impact. Each recycled plastic item contributes to a cleaner environment. Join us in reducing plastic waste through recycling.</p>
+                    <p className='font-sans font-extralight text-s'>Learn how recycling makes a big impact. Each recycled plastic item contributes to a cleaner environment. Join us in reducing plastic waste through recycling.</p>
 
                 </div>
                 <div className=' border-3 border-green-500 shadow-2xl rounded-3xl text-center p-2 transition ease-in-out duration-300  hover:-translate-y-0.7 hover:scale-105 hover:shadow-black'><FontAwesomeIcon icon={faShieldHalved} style={{ color: "#38B876", fontSize: '7rem', padding: '1rem' }} />
                     <h5 className='font-sans  tracking-widest'>Empowering Sustainability</h5>
-                    <p className='font-sans text-s'>Join our mission for a sustainable future. By converting plastic waste into biofuel, we're fighting pollution and creating a cleaner planet.</p>
+                    <p className='font-sans font-extralight text-s'>Join our mission for a sustainable future. By converting plastic waste into biofuel, we're fighting pollution and creating a cleaner planet.</p>
 
                 </div>
                 <div className=' border-3 border-green-500 shadow-2xl rounded-3xl text-center p-2 transition ease-in-out duration-300  hover:-translate-y-0.7 hover:scale-105 hover:shadow-black'><FontAwesomeIcon icon={faEyeDropper} style={{ color: "#38B876", fontSize: '7rem', padding: '1rem' }} />
                     <h5 className='font-sans  tracking-widest'>Each of us is important</h5>
-                    <p className='font-sans text-s'>Our organization expand the ideas of saving world’s ecology and is grateful for every little contribution!</p>
+                    <p className='font-sans font-extralight text-s'>Our organization expand the ideas of saving world’s ecology and is grateful for every little contribution!</p>
 
                 </div>
 
