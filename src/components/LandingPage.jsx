@@ -4,7 +4,7 @@ import green from '../assets/901726_OAI50C0.jpg';
 import '../components/style.css';
 import { useState } from 'react';
 
-const LandingPage = (props) => {
+const LandingPage = () => {
     const [signUp, setsignUp] = useState(false)
     
 
@@ -28,7 +28,7 @@ const LandingPage = (props) => {
 
                 <div className="container h-auto rounded m-3 p-3 sm:flex flex-col flex-shrink" style={{ flex: '1' }}>
                     <div className="text-left mb-2">
-                        <h6 className='pl-3 tracking-widest'>Hii There !!</h6>
+                        <h6 className='pl-3 tracking-widest font-light'>Hii There !!</h6>
                         <h3 className='pl-3 tracking-widest font-light'>
                            {signUp?"Welcome":"Welcome Back"}
                         </h3>

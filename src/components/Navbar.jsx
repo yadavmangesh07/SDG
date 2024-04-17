@@ -25,11 +25,11 @@ const Navbar = () => {
         <ul className='flex items-center space-x-12 text-xl ml-5 font-semibold  ' >
         <Link className=' text-black text-decoration-none' to='/'> 
         
-        <li className='font-medium transition ease-in-out duration-300  hover:-translate-y-0.7 hover:scale-125 hover:font-semibold hover:text-[#67BD46]' >Home</li>
+        <li className='font-light transition ease-in-out duration-300  hover:-translate-y-0.7 hover:scale-125 hover:font-semibold hover:text-[#67BD46]' >Home</li>
         </Link> 
-          <li className='font-medium transition ease-in-out duration-300  hover:-translate-y-0.7 hover:scale-125 hover:font-semibold hover:text-[#67BD46]' >Services</li>
-          <li className='font-medium transition ease-in-out duration-300  hover:-translate-y-0.7 hover:scale-125 hover:font-semibold hover:text-[#67BD46]'>About Us</li>
-          <li className='font-medium transition ease-in-out duration-300  hover:-translate-y-0.7 hover:scale-125 hover:font-semibold hover:text-[#67BD46]' >Contact Us</li>
+          <li className='font-light transition ease-in-out duration-300  hover:-translate-y-0.7 hover:scale-125 hover:font-semibold hover:text-[#67BD46]' >Services</li>
+          <li className='font-light transition ease-in-out duration-300  hover:-translate-y-0.7 hover:scale-125 hover:font-semibold hover:text-[#67BD46]'>About Us</li>
+          <li className='font-light transition ease-in-out duration-300  hover:-translate-y-0.7 hover:scale-125 hover:font-semibold hover:text-[#67BD46]' >Contact Us</li>
         </ul>
       </div>
       <div className=" flex space-x-12">
