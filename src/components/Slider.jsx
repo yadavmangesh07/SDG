@@ -3,6 +3,7 @@ import forest from '../assets/forest.jpg';
 import vision from '../assets/image.jpg'
 import impact from '../assets/impact.jpg'
 import mission from '../assets/mission.jpg'
+import slider2 from '../assets/slider2.jpg'
 
 const Slider = () => {
   return (
@@ -28,7 +29,11 @@ const Slider = () => {
         }}>Fueling sustainability</h1>
         <h1 className='text-center font-sans mt-[-2rem] text-white tracking-wider'>Converting plastic into power.</h1>
       </div>
-      <div className=' flex justify-center  absolute  bg-white   top-[70%] w-full h-[100vh]'>
+      <div className=' flex justify-center  absolute  top-[70%] w-full h-[100vh]' style={{
+       backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(${slider2})`,
+        backgroundSize: 'cover',
+        
+      }}>
         <div className=' flex flex-col h-[55vh] m-2.5  w-[26vw] relative top-[-13rem]  '>
           <div className='h-[auto]  p-[1.2rem] text-white tracking-wider bg-[#38B876]'>
             <h3 className='tracking-widest'>Vision</h3>
