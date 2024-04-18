@@ -4,12 +4,13 @@ import h2 from '../assets/h2.png';
 const Services = () => {
   return (
     <div
-      className='relative h-[50vh] '
+      className='relative h-[50vh] bg-white bg-opacity-50 '
       style={{
         backgroundImage: `url(${h2})`,
         backgroundSize: 'auto 115%', // Adjusted background size to fit container height and maintain image aspect ratio
         backgroundPosition: 'left', // Centered background position
         backgroundRepeat: 'no-repeat',
+      
       }}
     >
       <div className="absolute ">
@@ -18,19 +19,19 @@ const Services = () => {
         paddingTop:'2rem',
         fontSize:'6rem',
          
-        WebkitTextStroke: '1px black ',
+        WebkitTextStroke: '1px white ',
     }}
          >Running towards ,</h2>
         <h2 className='text-black '
          style={
             {
                 fontFamily:'samarkan',
-                paddingLeft:'46rem',
+                paddingLeft:'47rem',
                 fontSize:'4rem'
             }
          }>Sustainable Solutions</h2>
          <h4 className='font-sans text-2xl tracking-wider font-extralight' style={{
-            paddingLeft:'46rem',
+            paddingLeft:'48rem',
           
             
          }}> "Unveiling microbial-driven plastic  biodegradation </h4>

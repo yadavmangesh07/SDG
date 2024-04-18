@@ -2,17 +2,16 @@ import React from 'react';
 import i1 from '../assets/pngwing2.png'
 import { Link } from 'react-router-dom';
 import ImageCarousel from './ImageCarousel';
-import bg1 from '../assets/bg1.jpg'
 import Services from './Services';
 
 
 const Hero = () => {
     return (
         <>
-            <div className="parent flex  justify-around p-[5rem]  " style={{
-                height: '92vh'
+            <div className="parent flex  justify-around p-[5rem] bg-white bg-opacity-75  " style={{
+                height: '100vh'
             }}>
-                <div className="parent   ">
+                <div className="parent mt-[2rem]  ">
                     <h6 style={{
                         fontFamily: 'samarkan',
                         fontSize: '6rem',

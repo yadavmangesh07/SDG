@@ -11,7 +11,7 @@ import 'tailwindcss/tailwind.css';
 
 const Navbar = () => {
   return (
-    <div className=' border  flex justify-around items-center p-1 font-sans shadow'  >
+    <div className=' border bg-white fixed z-10 w-full flex justify-around items-center p-1 font-sans shadow'  >
       <div className=" text-xl ">
         <h6 style={{
           fontFamily: 'samarkan',
@@ -39,7 +39,7 @@ const Navbar = () => {
           <button><img src={lkd} alt="" style={{ height: '2.5rem' }} /></button>
         </div>
         <div className='flex items-center'>
-          <Link to='/login'>
+          <Link to='/form'>
 
             <button><img src={login} alt="" style={{ height: '2.7rem',paddingTop:'2.5px' }} /></button>
           </Link>
