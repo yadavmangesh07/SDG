@@ -4,7 +4,7 @@ import h2 from '../assets/h2.png';
 const Services = () => {
   return (
     <div
-      className='relative h-[50vh] bg-white bg-opacity-50 '
+      className='relative h-[50vh] bg-white  '
       style={{
         backgroundImage: `url(${h2})`,
         backgroundSize: 'auto 115%', // Adjusted background size to fit container height and maintain image aspect ratio

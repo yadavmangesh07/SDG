@@ -13,22 +13,22 @@ function App() {
   return (
     <BrowserRouter>
     <Navbar/>
+    
   
      
       {/* <LandingPage/> */}
-
       <Routes>
-        <Route path='/form' element={<LandingPage/>}/>
-        <Route path='/' element={<Hero/>}/>
-        <Route path='/' element={<ImageCarousel/>}/>
+        <Route path='/form' element={<LandingPage/>}></Route>
       </Routes>
-      <Slider/>
+      
+
+     <Hero/>
       
     </BrowserRouter>
       
    
     
-    // // <LandingPage/>
+    // <LandingPage/>
     
   )
 }

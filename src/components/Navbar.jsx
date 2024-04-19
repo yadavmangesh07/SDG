@@ -22,7 +22,7 @@ const Navbar = () => {
 
       </div>
       <div className="pt-2 w-auto">
-        <ul className='flex items-center space-x-12 text-xl ml-5 font-semibold  ' >
+        <ul className='flex items-center space-x-12 text-xl ml-5 font-semibold tracking-widest ' >
         <Link className=' text-black text-decoration-none' to='/'> 
         
         <li className='font-light transition ease-in-out duration-300  hover:-translate-y-0.7 hover:scale-125 hover:font-semibold hover:text-[#67BD46]' >Home</li>
@@ -44,9 +44,7 @@ const Navbar = () => {
             <button><img src={login} alt="" style={{ height: '2.7rem',paddingTop:'2.5px' }} /></button>
           </Link>
         </div>
-        <svg class="animate-bounce w-6 h-6 ...">
-
-        </svg>
+        
       </div>
     </div>
   )

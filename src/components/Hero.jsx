@@ -3,11 +3,14 @@ import i1 from '../assets/pngwing2.png'
 import { Link } from 'react-router-dom';
 import ImageCarousel from './ImageCarousel';
 import Services from './Services';
+import Slider from './Slider';
+import Navbar from './Navbar';
 
 
 const Hero = () => {
     return (
         <>
+        
             <div className="parent flex  justify-around p-[5rem] bg-white bg-opacity-75  " style={{
                 height: '100vh'
             }}>
@@ -81,6 +84,7 @@ const Hero = () => {
             </div>
             <ImageCarousel />
             <Services />
+            <Slider/>
         </>
     );
 };
