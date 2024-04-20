@@ -3,14 +3,13 @@ import forest from '../assets/forest.jpg';
 import vision from '../assets/image.jpg'
 import impact from '../assets/impact.jpg'
 import mission from '../assets/mission.jpg'
-import slider2 from '../assets/slider2.jpg'
 
 const Slider = () => {
   return (
-    <div className="parent h-[100vh] w-[100%] absolute  ">
+    <div className="parent h-[100vh] w-[100%] absolute   ">
       {/* Image background */}
-      <div
-        className=' h-[100%] w-[100%] fixed top-0 left-0'
+     <div
+        className=' h-[100%] w-[100%] fixed top-0 left-0 '
         style={{
           backgroundImage: `url(${forest})`,
           backgroundSize: 'cover',
@@ -18,6 +17,7 @@ const Slider = () => {
 
         }}
       ></div>
+     
 
       {/* Scrolling content */}
       <div className=' absolute top-[20%]  w-full'>

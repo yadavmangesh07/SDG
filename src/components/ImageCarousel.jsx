@@ -15,7 +15,7 @@ import { faShieldHalved } from '@fortawesome/free-solid-svg-icons/faShieldHalved
 
 const ImageCarousel = () => {
     return (
-        <div className=' border-t-white    relative overflow-hidden' style={{backgroundColor:'rgba(255, 255, 255, 1)'}} >
+        <div className=' border-t-white top-[-.9rem]   relative overflow-hidden' style={{backgroundColor:'rgba(255, 255, 255, 1)'}} >
             <Carousel autoPlay infiniteLoop={true} showThumbs={false} className=' '>
                 <div >
                     <img src={slide1} alt="Upcycling" className='w-full h-full object-cover' style={{ height: '70vh' }} />
