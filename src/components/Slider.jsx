@@ -7,7 +7,7 @@ import slider2 from '../assets/slider2.jpg'
 
 const Slider = () => {
   return (
-    <div className="parent h-[100vh] w-[100%] relative  ">
+    <div className="parent h-[100vh] w-[100%] absolute  ">
       {/* Image background */}
       <div
         className=' h-[100%] w-[100%] fixed top-0 left-0'

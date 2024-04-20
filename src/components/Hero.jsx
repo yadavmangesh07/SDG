@@ -5,6 +5,7 @@ import ImageCarousel from './ImageCarousel';
 import Services from './Services';
 import Slider from './Slider';
 import h1 from '../assets/h1.png'
+import Wave from './Wave'
 
 
 
@@ -12,7 +13,7 @@ const Hero = () => {
     return (
         <>
         
-            <div className="parent flex  justify-around p-[5rem] bg-white bg-opacity-75  " style={{
+            <div className="parent flex   justify-around p-[5rem] bg-white bg-opacity-50  " style={{
                 height: '100vh',
                 backgroundImage: `url(${h1})`,
                         // backgroundSize: 'contain',
@@ -33,7 +34,7 @@ const Hero = () => {
                         WebkitTextStroke: '1.5px black',
                     }}>Transform</h6>
                     <h3 className='font-sans' style={{
-                        fontSize: '3rem',
+                        fontSize: '3.5rem',
                         margin: '0', // Remove margin
                         padding: '0 10.4rem', // Adjust padding,
                         marginTop: '-2.5rem',
@@ -46,7 +47,7 @@ const Hero = () => {
                         fontSize: '5rem',
                         color: 'black', // Change color to black
                         textShadow: 'none', // Remove text shadow
-                        padding: '0 11.92rem', // Adjust padding,
+                        padding: '0 12.2rem', // Adjust padding,
                         marginTop: '-2.2rem',
                         WebkitTextStroke: '1.5px black'
                     }}>Treasure</h6>
@@ -94,7 +95,9 @@ const Hero = () => {
 
             </div>
             <ImageCarousel />
+            <Wave/>
             <Services />
+           
             <Slider/>
         </>
     );

@@ -11,7 +11,7 @@ import 'tailwindcss/tailwind.css';
 
 const Navbar = () => {
   return (
-    <div className=' border bg-white fixed z-10 w-full flex justify-around items-center p-1 font-sans shadow'  >
+    <div className=' border  bg-white fixed z-10 w-full flex justify-around items-center p-1 font-sans shadow'  >
       <div className=" text-xl ">
         <h6 style={{
           fontFamily: 'samarkan',

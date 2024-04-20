@@ -55,7 +55,7 @@ const LandingPage = () => {
     };
 
     return (
-        <div className=' bg-white sm:block w-full max-h-full font-sans' style={{ height: '100vh', marginTop: '5rem' }}>
+        <div className=' bg-white sm:block w-full max-h-full font-sans' style={{ height: '100vh', paddingTop: '10rem' }}>
             <div className="border-1 place-content-center shadow container d-flex justify-content-center align-item-center" style={{ height: 'auto', width: '90%', maxWidth: '900px', margin: 'auto', marginTop: '1rem', borderRadius: '1rem', overflow: 'hidden' }}>
                 <div className=" hidden md:block border-2 shadow ml-0 mt-2 mb-2.5" style={{ width: '50%', backgroundImage: `url(${green})`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '1rem' }}></div>
                 <div className="container h-auto rounded m-3 p-3 sm:flex flex-col flex-shrink" style={{ flex: '1' }}>

@@ -7,22 +7,30 @@ import { BrowserRouter , Routes, Route } from 'react-router-dom'
 import Slider from './components/Slider'
 
 
+
 function App() {
  
 
   return (
     <BrowserRouter>
+  
     <Navbar/>
     
   
      
-      {/* <LandingPage/> */}
-      <Routes>
-        <Route path='/form' element={<LandingPage/>}></Route>
-      </Routes>
-      
+    {/* <LandingPage/> */}
+    
+    <Routes>
+     <Route path='/form' element={<LandingPage/>}></Route>
+     <Route path='/' element={<Hero/>}></Route>
+   
+   
+    </Routes>
+    
+    
 
-     <Hero/>
+    
+     
       
     </BrowserRouter>
       

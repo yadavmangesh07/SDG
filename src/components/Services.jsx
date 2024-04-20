@@ -1,10 +1,31 @@
 import React from 'react';
 import h2 from '../assets/h2.png';
+import Wave from '../assets/wave.png'
+
 
 const Services = () => {
+  
   return (
-    <div
-      className='relative h-[50vh] bg-white  '
+    <div className="parent h-[55vh] bg-white top-[-5rem] relative"
+      
+       
+    
+    >
+      {/* <div className="wave h-[50vh]"  style={{
+          backgroundImage: `url(${Wave})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              transform: 'rotate(180deg)',
+             
+              
+              
+              
+      }}>
+
+      </div> */}
+      <div
+      className='relative h-[50vh]  bg-white mb-[7rem] ' id='services'
       style={{
         backgroundImage: `url(${h2})`,
         backgroundSize: 'auto 115%', // Adjusted background size to fit container height and maintain image aspect ratio
@@ -14,7 +35,7 @@ const Services = () => {
       }}
     >
       <div className="absolute ">
-        <h2 className=' font-sans text-[#459802]  ' style={{ 
+        <h2 className=' font-sans text-[#459802]  ' id='t1' style={{ 
         paddingLeft:'28rem',
         paddingTop:'2rem',
         fontSize:'6rem',
@@ -48,6 +69,7 @@ const Services = () => {
          }}
          >Learn more</button>
       </div>
+    </div>
     </div>
   );
 };
