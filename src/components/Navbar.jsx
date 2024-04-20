@@ -18,7 +18,8 @@ const Navbar = () => {
           fontSize: '2.5rem',
           color: '#000', // Change color to black
           textShadow: 'none' // Remove text shadow
-        }} >Eco <span style={{ color: 'red' }}>Plastic</span></h6>
+        }} >Bio <span className='font-sans tracking-tighter' style={{ color: 'red',
+        marginLeft:'-1rem' }}>fuel</span></h6>
 
       </div>
       <div className="pt-2 w-auto">
