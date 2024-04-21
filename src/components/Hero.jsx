@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import ImageCarousel from './ImageCarousel';
 import Services from './Services';
 import Slider from './Slider';
-import h1 from '../assets/h1.png'
 import Wave from './Wave'
 import video from '../assets/film.mp4'
 
@@ -23,7 +22,7 @@ const Hero = () => {
                 </video>
 
 
-                <div className="parent p-[5rem] mt-[3rem] ml-[3rem] h-[100vh] w-[100vw] absolute ">
+                <div className="parent p-[5rem] mt-[3rem] pl-[7rem] h-[100vh] w-[100%] bg-opacity-50 absolute bg-black ">
                     <h6 style={{
                         fontFamily: 'samarkan',
                         fontSize: '5rem',
@@ -67,7 +66,7 @@ const Hero = () => {
 
 
                     <div className=' text-center font-sans  mt-[5rem] ' >
-                        <Link to="/login" className=' text-black text-decoration-none'>
+                        <Link to="/form" className=' text-black text-decoration-none'>
                             <button className='text-red bg-white border-1 border-black shadow-2xl rounded-pill w-[20rem] h-[3rem] transition ease-in-out duration-300 hover:-translate-0.7 hover:scale-105 tracking-widest'>Join Us</button>
 
                         </Link>
@@ -79,14 +78,7 @@ const Hero = () => {
                     filter: 'drop-shadow(0 0 10px rgba(0, 0, 0, 0.2))',
                 }}>
                     <div 
-                    // style={{
-                    //     backgroundImage: `url(${i1})`,
-                    //     backgroundSize: 'contain',
-                    //     backgroundPosition: 'center',
-                    //     backgroundRepeat: 'no-repeat',
-                    //     width: '100%',
-                    //     height: '100%',
-                    // }}
+                   
                     >
                     </div>
                 </div>

@@ -4,7 +4,7 @@ import google from '../assets/google.png';
 import green from '../assets/901726_OAI50C0.jpg';
 import '../components/style.css';
 
-const LandingPage = () => {
+const LandingPage = ({setLogin}) => {
     const [signUp, setsignUp] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -18,6 +18,7 @@ const LandingPage = () => {
             console.log(response.data);
             // Handle successful login
             alert('Login successful');
+            setLogin(true);
         } catch (error) {
             console.error('Login Error:', error.response.data);
             // Handle login error
