@@ -3,13 +3,16 @@ import forest from '../assets/forest.jpg';
 import vision from '../assets/image.jpg'
 import impact from '../assets/impact.jpg'
 import mission from '../assets/mission.jpg'
+import log from '../assets/logs.jpg'
 
 const Slider = () => {
   return (
-    <div className="parent h-[100vh] w-[100%] absolute   ">
+    <div className="parent h-[100vh] w-[100%] absolute   "
+
+    >
       {/* Image background */}
-     <div
-        className=' h-[100%] w-[100%] fixed top-0 left-0 '
+      <div
+        className=' h-[100%] w-[100%] fixed top-0 left-0'
         style={{
           backgroundImage: `url(${forest})`,
           backgroundSize: 'cover',
@@ -17,7 +20,7 @@ const Slider = () => {
 
         }}
       ></div>
-     
+
 
       {/* Scrolling content */}
       <div className=' absolute top-[20%]  w-full'>
@@ -29,7 +32,21 @@ const Slider = () => {
         }}>Fueling sustainability</h1>
         <h1 className='text-center font-sans mt-[-2rem] text-white tracking-wider'>Converting plastic into power.</h1>
       </div>
-      <div className=' flex justify-center bg-white absolute  top-[70%] w-full h-[100vh]' >
+      <div className=' flex justify-center bg-black absolute   top-[70%] w-full h-[100vh] '
+        style={{
+          backgroundImage: `url(${log})`,
+          backgroundSize: 'cover',
+          zIndex:'-1'
+         
+
+
+        }}
+      >
+        <div className='flex justify-center ' style={{
+        backgroundColor: 'rgba(255, 255, 255, 0.3)', // White background with 50% opacity
+        width: '100%',
+        height: '100%'
+    }}>
         <div className=' flex flex-col h-[55vh] m-2.5  w-[26vw] relative top-[-13rem]  '>
           <div className='h-[auto]  p-[1.2rem] text-white tracking-wider bg-[#38B876]'>
             <h3 className='tracking-widest'>Vision</h3>
@@ -45,23 +62,23 @@ const Slider = () => {
           </div>
         </div>
         <div className='h-[55vh] m-2.5  w-[26vw] relative top-[-13rem] '>
-        <div className='h-[auto]  text-white p-[1.2rem] tracking-wider bg-[#38B876]'>
+          <div className='h-[auto]  text-white p-[1.2rem] tracking-wider bg-[#38B876]'>
             <h3 className='tracking-widest '>Mission</h3>
             <p className='font-extralight'>Our mission is to utilize micro bacterial biodegradation, converting plastic waste into renewable energy for a cleaner, greener planet.</p>
           </div>
           <div className=' w-[full] h-[58%] '
-          style={{
-            backgroundImage: `url(${mission})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-          }}>
+            style={{
+              backgroundImage: `url(${mission})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+            }}>
 
           </div>
-          
+
         </div>
         <div className='h-[55vh] m-2.5 w-[26vw] relative top-[-13rem] '>
-        <div className='h-[auto]  text-white p-[1.2rem] tracking-wider bg-[#38B876]'>
+          <div className='h-[auto]  text-white p-[1.2rem] tracking-wider bg-[#38B876]'>
             <h3 className='tracking-widest'>Impact</h3>
             <p className='font-extralight'>Through our efforts, we transform waste into opportunity, safeguarding the environment and shaping a sustainable future for all.</p>
           </div>
@@ -70,15 +87,17 @@ const Slider = () => {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            
+
           }}>
 
           </div>
-          
+
         </div>
 
       </div>
-    </div>
+      </div>
+      </div>
+    
   );
 };
 
