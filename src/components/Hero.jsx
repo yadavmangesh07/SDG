@@ -65,7 +65,7 @@ const Hero = () => {
 
 
 
-                    <div className=' text-center font-sans  mt-[5rem] ' >
+                    <div className=' text-center font-sans  mt-[6rem] ' >
                         <Link to="/form" className=' text-black text-decoration-none'>
                             <button className='text-red bg-white border-1 border-black shadow-2xl rounded-pill w-[20rem] h-[3rem] transition ease-in-out duration-300 hover:-translate-0.7 hover:scale-105 tracking-widest'>Join Us</button>
 
