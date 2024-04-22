@@ -4,7 +4,8 @@ import google from '../assets/google.png';
 import green from '../assets/901726_OAI50C0.jpg';
 import '../components/style.css';
 import { useNavigate } from 'react-router-dom';
-const LandingPage = ({setLogin,setUserDetails,userDetails}) => {
+
+const LandingPage = ({setLogin,setuserDetails}) => {
     const [signUp, setsignUp] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -17,13 +18,17 @@ const LandingPage = ({setLogin,setUserDetails,userDetails}) => {
         try {
             const response = await axios.post('http://localhost:3000/api/login', { email, password });
             console.log(response.data);
-            if(response.data.success){
-                const user = response.data.user;
-             setUserDetails(user);
-             console.log(user);
-             
+            navigate('/');
+          
 
-            }
+            // if(response.data.success){
+            //     const user = response.data.user;
+            //     
+            //  setuserDetails(user);
+            // //  console.log(user);
+            //  console.log("hello");
+
+            // }
             // Handle successful login
             // alert('Login successful');
             setLogin(true);

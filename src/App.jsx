@@ -18,13 +18,13 @@ function App() {
   return (
     <BrowserRouter>
   
-    <Navbar login={login}/>
+    <Navbar login={login} setLogin={setLogin}/>
     
    
     
     <Routes>
-     <Route path='/form' element={<LandingPage setLogin={setLogin} setuserDetails={setuserDetails} userDetails={userDetails} />}></Route>
-     <Route path='/' element={<Hero/>}></Route>
+     <Route path='/form' element={<LandingPage setLogin={setLogin} setuserDetails={setuserDetails} userDetails={userDetails} />}/>
+     <Route path='/' element={<Hero />}/>
    
    
     </Routes>
@@ -33,8 +33,7 @@ function App() {
       
    
     
-    // <LandingPage/>
-    // <Message/>
+    
     
     
   )

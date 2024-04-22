@@ -14,7 +14,7 @@ const Footer = () => {
           color: 'white', // Change color to black
           textShadow: 'none' // Remove text shadow
         }} >Bio <span className='font-sans tracking-tighter' style={{ color: 'red',
-        marginLeft:'-1rem' }}>fuel</span></h6>
+        marginLeft:'-1rem',WebkitTextStroke: '.5px black', }}>fuel</span></h6>
         <div>
             <p className='font-light tracking-widest font-sans text-white'>Amidst the quest for a sustainable energy future, biofuel emerges as a promising solution, offering a path towards universal satisfaction</p>
         </div>
