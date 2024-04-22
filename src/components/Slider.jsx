@@ -7,7 +7,7 @@ import log from '../assets/logs.jpg'
 
 const Slider = () => {
   return (
-    <div className="parent h-[100vh] w-[100%] absolute   "
+    <div className="parent h-[100vh] w-[100%] relative   "
 
     >
       {/* Image background */}

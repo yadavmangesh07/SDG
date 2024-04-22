@@ -2,7 +2,7 @@ import React from 'react';
 import fb from '../assets/icons/facebook.png';
 import x from '../assets/icons/twitter.png';
 import lkd from '../assets/icons/linkedin.png';
-import login from '../assets/icons/login.png';
+import login1 from '../assets/icons/login.png';
 import '../components/style.css';
 import { Link } from 'react-router-dom'
 
@@ -40,7 +40,7 @@ const Navbar = ({login}) => {
           <button><img src={lkd} alt="" style={{ height: '2.5rem' }} /></button>
         </div>
         <div className='flex items-center'>
-          {!login &&             <button><img src={login} alt="" style={{ height: '2.7rem',paddingTop:'2.5px' }} /></button>
+          {login &&             <button><img src={login1} alt="" style={{ height: '2.7rem',paddingTop:'2.5px' }} /></button>
 }
         </div>
         

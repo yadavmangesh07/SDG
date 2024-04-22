@@ -6,6 +6,7 @@ import Services from './Services';
 import Slider from './Slider';
 import Wave from './Wave'
 import video from '../assets/film.mp4'
+import Footer from './Footer';
 
 
 
@@ -89,7 +90,8 @@ const Hero = () => {
             <Wave/>
             <Services />
            
-            <Slider/>
+            <Slider />
+            <Footer />
         </>
     );
 };
