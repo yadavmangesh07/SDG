@@ -1,13 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const ResponseForm = ({location}) => {
+const ResponseForm = ({ location }) => {
     const [formData, setFormData] = useState({
         name: '',
         phoneNumber: '',
         email: '',
         aadharNo: '',
-        location: '',
+        longitude: '',
+        latitude: '',
     });
+
+    // Update form data when location prop changes
+    useEffect(() => {
+        if (location) {
+            setFormData(prevState => ({
+                ...prevState,
+                longitude: location.lng,
+                latitude: location.lat
+            }));
+        }
+    }, [location]);
 
     const handleChange = (e) => {
         setFormData({
@@ -18,14 +30,44 @@ const ResponseForm = ({location}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log(formData);
+
+        // Check if longitude and latitude are not empty
+        if (formData.longitude !== '' && formData.latitude !== '') {
+            // Send form data to the backend
+            fetch('http://localhost:3001/submit-form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+                .then(response => {
+                    if (response.ok) {
+                        console.log('Form data submitted successfully');
+                        // Reset form after successful submission
+                        setFormData({
+                            name: '',
+                            phoneNumber: '',
+                            email: '',
+                            aadharNo: '',
+                            longitude: '',
+                            latitude: '',
+                        });
+                    } else {
+                        console.error('Failed to submit form data');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error occurred while submitting form data:', error);
+                });
+        } else {
+            console.error('Longitude and latitude cannot be empty');
+        }
     };
 
     return (
         <div className="parent flex flex-col w-full p-5 font-sans tracking-widest">
             <h3 className='text-center tracking-widest'>Fill Details</h3>
-           
             <div className="max-w-md mx-auto mt-10">
                 <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
                     <div>
@@ -78,17 +120,23 @@ const ResponseForm = ({location}) => {
                     </div>
                     <div className="col-span-2">
                         <h3>Location</h3>
-                        <h6> Longitude = {location.lng} & Latitude = {location.lat}</h6>
-                        
+                        {location && (
+                            <h6> Longitude = {location.lng} & Latitude = {location.lat}</h6>
+                        )}
+                        {/* Store latitude and longitude in form data */}
+                        {location && (
+                            <>
+                                <input type="hidden" name="longitude" value={location.lng} />
+                                <input type="hidden" name="latitude" value={location.lat} />
+                            </>
+                        )}
                     </div>
                     <div className="col-span-2">
                         <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Submit</button>
                     </div>
                 </form>
             </div>
-           
         </div>
-
     );
 };
 

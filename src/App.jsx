@@ -4,7 +4,7 @@ import LandingPage from './components/LandingPage'
 import Hero from './components/Hero'
 import { BrowserRouter , Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
-import Message from './components/Message'
+import Map from './components/Map'
 
 
 
@@ -16,20 +16,22 @@ function App() {
 
 
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
   
-    <Navbar login={login} setLogin={setLogin}/>
+    // <Navbar login={login} setLogin={setLogin}/>
     
    
     
-    <Routes>
-     <Route path='/form' element={<LandingPage setLogin={setLogin} setuserDetails={setuserDetails} userDetails={userDetails} />}/>
-     <Route path='/' element={<Hero />}/>
+    // <Routes>
+    //  <Route path='/form' element={<LandingPage setLogin={setLogin} setuserDetails={setuserDetails} userDetails={userDetails} />}/>
+    //  <Route path='/' element={<Hero />}/>
    
    
-    </Routes>
+    // </Routes>
       
-    </BrowserRouter>
+    // </BrowserRouter>
+    <Map/>
+
       
    
     
