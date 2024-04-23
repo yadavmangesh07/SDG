@@ -24,18 +24,17 @@ const Map = () => {
     function handleResetLocation() {
         setDefaultLocation({ ...DefaultLocation });
         setZoom(DefaultZoom);
+        setLocation({lat:0,lng:0})
     }
 
     return (
-        <div className="parent m-5 flex font-sans tracking-widest">
-            <div className="FormSection border ">
+        <div className="parent m-5 flex justify-around font-light font-sans tracking-widest max-h-screen">
+            <div className="FormSection  ">
                 <ResponseForm location={location} />
             </div>
-            <div className='MapSection border-2 border-red-500 w-auto p-2'>
+            <div className='MapSection w-auto p-2'>
                 <div className="buttonBox  ">
                     <button className='bg-white border-1 border-black shadow-2xl rounded w-[10rem] h-[3rem] absolute z-10 m-1' onClick={handleResetLocation}>Reset Location</button>
-                    {/* <label>Latitute:</label><input type='text' value={location.lat} disabled />
-                    <label>Longitute:</label><input type='text' value={location.lng} disabled /> */}
                    
                    
                    
@@ -44,8 +43,9 @@ const Map = () => {
                 <div className="map -z-10 ">
                     <MapPicker defaultLocation={defaultLocation}
                         zoom={zoom}
+                        className='rounded-lg'
                         mapTypeId="roadmap"
-                        style={{ height: '700px', width: '700px' }}
+                        style={{ height: '800px', width: '700px' }}
                         onChangeLocation={handleChangeLocation}
                         onChangeZoom={handleChangeZoom}
                         apiKey='AIzaSyD07E1VvpsN_0FvsmKAj4nK9GnLq-9jtj8' />

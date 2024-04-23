@@ -30,8 +30,8 @@ app.post('/submit-form', (req, res) => {
   const formData = req.body;
 
   // Insert form data into the database
-  const sql = 'INSERT INTO FormResponses (name, phoneNumber, email, aadharNo, longitude, latitude) VALUES (?, ?, ?, ?, ?, ?)';
-  const values = [formData.name, formData.phoneNumber, formData.email, formData.aadharNo, formData.longitude, formData.latitude];
+  const sql = 'INSERT INTO FormResponses (name, phoneNumber, email, aadharNo, longitude, latitude, addressLine1, addressLine2, city, state, postalCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+  const values = [formData.name, formData.phoneNumber, formData.email, formData.aadharNo, formData.longitude, formData.latitude, formData.addressLine1, formData.addressLine2, formData.city, formData.state, formData.postalCode];
 
   db.query(sql, values, (err, result) => {
     if (err) {

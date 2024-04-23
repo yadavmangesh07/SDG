@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 const ResponseForm = ({ location }) => {
     const [formData, setFormData] = useState({
         name: '',
@@ -8,6 +7,11 @@ const ResponseForm = ({ location }) => {
         aadharNo: '',
         longitude: '',
         latitude: '',
+        addressLine1: '',
+        addressLine2: '',
+        city: '',
+        state: '',
+        postalCode: '',
     });
 
     // Update form data when location prop changes
@@ -52,6 +56,11 @@ const ResponseForm = ({ location }) => {
                             aadharNo: '',
                             longitude: '',
                             latitude: '',
+                            addressLine1: '',
+                            addressLine2: '',
+                            city: '',
+                            state: '',
+                            postalCode: '',
                         });
                     } else {
                         console.error('Failed to submit form data');
@@ -66,12 +75,12 @@ const ResponseForm = ({ location }) => {
     };
 
     return (
-        <div className="parent flex flex-col w-full p-5 font-sans tracking-widest">
-            <h3 className='text-center tracking-widest'>Fill Details</h3>
+        <div className="parent border-1 flex  flex-col w-full p-5  shadow-lg rounded-lg font-sans tracking-widest">
+            <h3 className='text-center tracking-widest font-light'>Contribute With Us</h3>
             <div className="max-w-md mx-auto mt-10">
                 <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
                     <div>
-                        <label htmlFor="name" className="block">Name</label>
+                        <label htmlFor="name" className="block">Name*</label>
                         <input
                             type="text"
                             id="name"
@@ -83,7 +92,7 @@ const ResponseForm = ({ location }) => {
                         />
                     </div>
                     <div>
-                        <label htmlFor="phoneNumber" className="block">Phone Number</label>
+                        <label htmlFor="phoneNumber" className="block">Phone Number*</label>
                         <input
                             type="tel"
                             id="phoneNumber"
@@ -95,7 +104,7 @@ const ResponseForm = ({ location }) => {
                         />
                     </div>
                     <div>
-                        <label htmlFor="email" className="block">Email</label>
+                        <label htmlFor="email" className="block">Email*</label>
                         <input
                             type="email"
                             id="email"
@@ -107,7 +116,7 @@ const ResponseForm = ({ location }) => {
                         />
                     </div>
                     <div>
-                        <label htmlFor="aadharNo" className="block">Aadhar Number</label>
+                        <label htmlFor="aadharNo" className="block">Aadhar Number*</label>
                         <input
                             type="text"
                             id="aadharNo"
@@ -118,10 +127,72 @@ const ResponseForm = ({ location }) => {
                             required
                         />
                     </div>
+                    <div>
+                        <label htmlFor="addressLine1" className="block">Address Line 1*</label>
+                        <input
+                            type="text"
+                            id="addressLine1"
+                            name="addressLine1"
+                            value={formData.addressLine1}
+                            onChange={handleChange}
+                            className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="addressLine2" className="block">Address Line 2</label>
+                        <input
+                            type="text"
+                            id="addressLine2"
+                            name="addressLine2"
+                            value={formData.addressLine2}
+                            onChange={handleChange}
+                            className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="city" className="block">City*</label>
+                        <input
+                            type="text"
+                            id="city"
+                            name="city"
+                            value={formData.city}
+                            onChange={handleChange}
+                            className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="state" className="block">State*</label>
+                        <input
+                            type="text"
+                            id="state"
+                            name="state"
+                            value={formData.state}
+                            onChange={handleChange}
+                            className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="postalCode" className="block">Postal Code*</label>
+                        <input
+                            type="text"
+                            id="postalCode"
+                            name="postalCode"
+                            value={formData.postalCode}
+                            onChange={handleChange}
+                            className="w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+                            required
+                        />
+                    </div>
                     <div className="col-span-2">
-                        <h3>Location</h3>
+                        <h5 className='font-light'>Location</h5>
                         {location && (
-                            <h6> Longitude = {location.lng} & Latitude = {location.lat}</h6>
+                            <>
+                            <p> Longitude : {location.lng} </p>
+                            <p className='mt-[-.5rem]'>  Latitude : {location.lat}</p>
+                            </>
                         )}
                         {/* Store latitude and longitude in form data */}
                         {location && (
@@ -131,10 +202,11 @@ const ResponseForm = ({ location }) => {
                             </>
                         )}
                     </div>
-                    <div className="col-span-2">
+                    <div className="col-span-2 text-center">
                         <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Submit</button>
                     </div>
                 </form>
+                
             </div>
         </div>
     );
