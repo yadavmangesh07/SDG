@@ -16,21 +16,21 @@ function App() {
 
 
   return (
-    // <BrowserRouter>
+    <BrowserRouter>
   
-    // <Navbar login={login} setLogin={setLogin}/>
+    <Navbar login={login} setLogin={setLogin}/>
     
    
     
-    // <Routes>
-    //  <Route path='/form' element={<LandingPage setLogin={setLogin} setuserDetails={setuserDetails} userDetails={userDetails} />}/>
-    //  <Route path='/' element={<Hero />}/>
+    <Routes>
+     <Route path='/form' element={<LandingPage setLogin={setLogin} setuserDetails={setuserDetails} userDetails={userDetails} />}/>
+     <Route path='/' element={<Hero />}/>
    
    
-    // </Routes>
+    </Routes>
       
-    // </BrowserRouter>
-    <Map/>
+    </BrowserRouter>
+    // <Map/>
 
       
    
