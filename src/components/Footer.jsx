@@ -24,15 +24,15 @@ const Footer = () => {
             <h3>CONTACT US</h3>
             <div className='flex justify-start align-middle mt-3'>
             <div><FontAwesomeIcon icon={faHouse} /></div>
-            <p className='font-light tracking-widest font-sans pl-5'>jbcjkavbk</p>
+            <p className='font-light tracking-widest font-sans pl-5'>Greater Noida</p>
             </div>
             <div className='flex justify-start align-middle'>
             <div><FontAwesomeIcon icon={faEnvelope} /></div>
-            <p className='font-light tracking-widest font-sans pl-5'>jbcjkavbk</p>
+            <p className='font-light tracking-widest font-sans pl-5'>aparajeet@gmail.com</p>
             </div>
             <div className='flex justify-start align-middle'>
             <div><FontAwesomeIcon icon={faPhone} /></div>
-            <p className='font-light tracking-widest font-sans pl-5'>jbcjkavbk</p>
+            <p className='font-light tracking-widest font-sans pl-5'>+91 8299833178</p>
             </div>
             
             

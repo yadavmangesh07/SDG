@@ -28,7 +28,7 @@ const Map = () => {
     }
 
     return (
-        <div className="parent m-5 flex justify-around font-light font-sans tracking-widest max-h-screen">
+        <div className="parent m-5 absolute top-[3rem]  flex justify-around font-light font-sans tracking-widest max-h-screen">
             <div className="FormSection  ">
                 <ResponseForm location={location} />
             </div>

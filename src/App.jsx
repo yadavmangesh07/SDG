@@ -25,6 +25,7 @@ function App() {
     <Routes>
      <Route path='/form' element={<LandingPage setLogin={setLogin} setuserDetails={setuserDetails} userDetails={userDetails} />}/>
      <Route path='/' element={<Hero />}/>
+     <Route path='/contribute' element={<Map/>}/>
    
    
     </Routes>

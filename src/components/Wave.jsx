@@ -1,5 +1,6 @@
 import React from 'react'
 import wave from '../assets/wave.png'
+import { Link } from 'react-router-dom'
 
 const Wave = () => {
   return (
@@ -11,7 +12,8 @@ const Wave = () => {
         <p className='font-sans tracking-widest text-center' style={{fontSize:'2rem',WebkitTextStroke: '.5px black'}}>Contribute and transform our planet's future</p>
         
       </div>
-      <button className='absolute z-50 mt-5 bg-white text-black  border-1 border-black rounded-pill font-sans transition ease-in-out duration-300 hover:text-white hover:-translate-0.7 hover:scale-105 tracking-widest'
+      <Link to='/contribute'>
+      <button className='absolute z-10 mt-5 bg-white text-black  border-1 border-black rounded-pill font-sans transition ease-in-out duration-300 hover:text-white hover:-translate-0.7 hover:scale-105 tracking-widest'
          style={{
             marginLeft:'60rem',
             marginTop:'1rem',
@@ -19,6 +21,7 @@ const Wave = () => {
             height:'3rem'
          }}
          >Contribute</button>
+         </Link>
       <div className="wave h-[50vh]   w-100% relative"
         style={{
           backgroundImage: `url(${wave})`,
