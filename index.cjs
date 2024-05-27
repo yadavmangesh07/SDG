@@ -39,9 +39,9 @@ const formResponseSchema = new mongoose.Schema({
 const FormResponse = mongoose.model('FormResponse', formResponseSchema);
 
 app.use(bodyParser.json());
-app.use(cors({
-  origin: 'http://localhost:5173'
-}));
+// app.use(cors({
+//   origin: 'http://localhost:5173'
+// }));
 
 // Routes
 app.post('/api/register', async (req, res) => {
