@@ -3,7 +3,7 @@
 
 Biofuel Website is a platform aimed at promoting sustainable development goals by collecting plastics and converting them into biofuel through catalytic conversion. This project utilizes Vite, React, Node.js, and MongoDB to create a dynamic and interactive website for users interested in contributing to the cause of sustainable energy production.
 
-![Biofuel Website Screenshot](/path/to/screenshot.png)
+![Biofuel Website Screenshot](./Homepage.png)
 
 ## Features
 
