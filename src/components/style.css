@@ -1,10 +1,10 @@
 
 @font-face {
   font-family: 'Samarkan';
-  src: url('fonts/Samarkan/SAMARN__.TTF') format('truetype'); /* Adjust the path to your font file */
+  src: url('../fonts/Samarkan/SAMARN__.TTF') format('truetype'); /* Adjust the path to your font file */
 }
 @font-face {
   font-family: 'Poppins';
-  src: url('fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
 }
 
