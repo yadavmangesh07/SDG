@@ -24,7 +24,7 @@ const ResponseForm = () => {
         e.preventDefault();
 
         // Send form data to the backend
-        fetch('http://localhost:3000/submit-form', {
+        fetch('https://sdg-backend-us3m.onrender.com/submit-form', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -17,7 +17,7 @@ const LandingPage = ({setLogin}) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/api/login', { email, password });
+            const response = await axios.post('https://sdg-backend-us3m.onrender.com/api/login', { email, password });
             console.log(response.data);
             navigate('/login-success');
             setLogin(true);
@@ -34,7 +34,7 @@ const LandingPage = ({setLogin}) => {
             return;
         }
         try {
-            const response = await axios.post('http://localhost:3000/api/register', { email, password });
+            const response = await axios.post('https://sdg-backend-us3m.onrender.com/api/register', { email, password });
             console.log(response.data);
             if (response.data.success) {
                 alert('Registration successful');
