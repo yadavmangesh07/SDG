@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
             <div className='flex justify-start align-middle'>
             <div><FontAwesomeIcon icon={faEnvelope} /></div>
-            <p className='font-light tracking-widest font-sans pl-5'>aparajeet@gmail.com</p>
+            <p className='font-light tracking-widest font-sans pl-5'>mangeshyadav8736@gmail.com</p>
             </div>
             <div className='flex justify-start align-middle'>
             <div><FontAwesomeIcon icon={faPhone} /></div>

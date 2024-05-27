@@ -1,7 +1,7 @@
 import React from 'react';
 import h2 from '../assets/h2.png';
-import Wave from '../assets/wave.png'
-
+// import Wave from '../assets/wave.png'
+import {Link} from 'react-router-dom'
 
 const Services = () => {
   
@@ -60,6 +60,7 @@ const Services = () => {
             paddingLeft:'62rem',
             
          }}> And Bio-fuel Production"</h4>
+         <Link to='/about' className='text-decoration-none text-black'>
          <button className='hover:bg-[#38B876] border-1 border-black rounded-pill font-sans transition ease-in-out duration-300 hover:text-white hover:-translate-0.7 hover:scale-105 tracking-widest'
          style={{
             marginLeft:'60rem',
@@ -68,6 +69,7 @@ const Services = () => {
             height:'3rem'
          }}
          >Learn more</button>
+         </Link>
       </div>
     </div>
     </div>

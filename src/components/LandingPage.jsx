@@ -5,8 +5,9 @@ import green from '../assets/901726_OAI50C0.jpg';
 import '../components/style.css';
 import { useNavigate } from 'react-router-dom';
 
-const LandingPage = ({setLogin,setuserDetails}) => {
+const LandingPage = ({setLogin}) => {
     const [signUp, setsignUp] = useState(false);
+    
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -18,27 +19,14 @@ const LandingPage = ({setLogin,setuserDetails}) => {
         try {
             const response = await axios.post('http://localhost:3000/api/login', { email, password });
             console.log(response.data);
-            navigate('/');
-          
-
-            // if(response.data.success){
-            //     const user = response.data.user;
-            //     
-            //  setuserDetails(user);
-            // //  console.log(user);
-            //  console.log("hello");
-
-            // }
-            // Handle successful login
-            // alert('Login successful');
+            navigate('/login-success');
             setLogin(true);
         } catch (error) {
-            console.error('Login Error:', error.response.data);
-            // Handle login error
-            alert('Login failed: ' + error.response.data.message);
+            console.error('Login Error:', error.response?.data);
+            alert('Login failed: ' + (error.response?.data?.message || 'Unknown error'));
         }
     };
-    
+
     const handleRegister = async (e) => {
         e.preventDefault();
         if (password !== confirmPassword) {
@@ -50,14 +38,14 @@ const LandingPage = ({setLogin,setuserDetails}) => {
             console.log(response.data);
             if (response.data.success) {
                 alert('Registration successful');
+                navigate('/registration-success');
             }
         } catch (error) {
-            console.error('Registration Error:', error);
-            // Handle registration error
-            alert('Registration failed: ' + error.response.data.message
-        );
+            console.error('Registration Error:', error.response?.data);
+            alert('Registration failed: ' + (error.response?.data?.message || 'Unknown error'));
         }
     };
+
 
     const switchForm = () => {
         setsignUp(!signUp);
@@ -114,3 +102,5 @@ const LandingPage = ({setLogin,setuserDetails}) => {
 };
 
 export default LandingPage;
+
+

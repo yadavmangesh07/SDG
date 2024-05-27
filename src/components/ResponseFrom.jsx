@@ -32,13 +32,54 @@ const ResponseForm = ({ location }) => {
         });
     };
 
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+
+    //     // Check if longitude and latitude are not empty
+    //     if (formData.longitude !== '' && formData.latitude !== '') {
+    //         // Send form data to the backend
+    //         fetch('http://localhost:3001/submit-form', {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify(formData),
+    //         })
+    //             .then(response => {
+    //                 if (response.ok) {
+    //                     console.log('Form data submitted successfully');
+    //                     // Reset form after successful submission
+    //                     setFormData({
+    //                         name: '',
+    //                         phoneNumber: '',
+    //                         email: '',
+    //                         aadharNo: '',
+    //                         longitude: '',
+    //                         latitude: '',
+    //                         addressLine1: '',
+    //                         addressLine2: '',
+    //                         city: '',
+    //                         state: '',
+    //                         postalCode: '',
+    //                     });
+    //                 } else {
+    //                     console.error('Failed to submit form data');
+    //                 }
+    //             })
+    //             .catch(error => {
+    //                 console.error('Error occurred while submitting form data:', error);
+    //             });
+    //     } else {
+    //         console.error('Longitude and latitude cannot be empty');
+    //     }
+    // };
     const handleSubmit = (e) => {
         e.preventDefault();
 
         // Check if longitude and latitude are not empty
         if (formData.longitude !== '' && formData.latitude !== '') {
             // Send form data to the backend
-            fetch('http://localhost:3001/submit-form', {
+            fetch('http://localhost:3000/submit-form', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -63,17 +104,19 @@ const ResponseForm = ({ location }) => {
                             postalCode: '',
                         });
                     } else {
-                        console.error('Failed to submit form data');
+                        return response.json().then(data => {
+                            console.error('Failed to submit form data:', data.message);
+                            throw new Error(data.message);
+                        });
                     }
                 })
                 .catch(error => {
-                    console.error('Error occurred while submitting form data:', error);
+                    console.error('Error occurred while submitting form data:', error.message);
                 });
         } else {
             console.error('Longitude and latitude cannot be empty');
         }
     };
-
     return (
         <div className="parent border-1 flex  flex-col w-full p-5  shadow-lg rounded-lg font-sans tracking-widest">
             <h3 className='text-center tracking-widest font-light'>Contribute With Us</h3>
