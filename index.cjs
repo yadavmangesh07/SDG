@@ -28,8 +28,6 @@ const formResponseSchema = new mongoose.Schema({
   phoneNumber: String,
   email: String,
   aadharNo: String,
-  longitude: Number,
-  latitude: Number,
   addressLine1: String,
   addressLine2: String,
   city: String,
